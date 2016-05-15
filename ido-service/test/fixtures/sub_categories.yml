@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type: 
+  active: false
+  category: one
+
+two:
+  type: 
+  active: false
+  category: two

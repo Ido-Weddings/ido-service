@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  category: one
+  enterprise: one
+  base_price: 1.5
+  description: MyString
+  capacity: 1
+
+two:
+  category: two
+  enterprise: two
+  base_price: 1.5
+  description: MyString
+  capacity: 1
