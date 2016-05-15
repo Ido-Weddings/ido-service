@@ -1,4 +1,4 @@
 class SubCategorySerializer < ActiveModel::Serializer
-  attributes :id, :type, :active
+  attributes :id, :name, :active
   has_one :category
 end

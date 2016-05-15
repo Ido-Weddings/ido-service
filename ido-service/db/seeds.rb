@@ -75,9 +75,7 @@ enterprise = Enterprise.create(name: "Meu Dia Perfeito",
                         telephone: "3344-1133",
                         cellphone: "8112-1212",
                         email: "meudiaperfeito_suporte@meudiaperfeito.com",
-                        address: " Rua das Aroeiras Quadra 107 l. 2/4 Apto 504b Águas Llaras 71920-700 Brasília (Distrito Federal)",
-                        password: "12345678",
-                        password_confirmation: "12345678")
+                        address: " Rua das Aroeiras Quadra 107 l. 2/4 Apto 504b Águas Llaras 71920-700 Brasília (Distrito Federal)")
 category_enterprise = CategoryEnterprise.create(enterprise_id: enterprise.id, category_id: 1,
 base_price: 2000.0,
 description: "Categoria de cerimonias",

@@ -46,6 +46,6 @@ class SubCategoriesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def sub_category_params
-      params.require(:sub_category).permit(:type, :active, :category_id)
+      params.require(:sub_category).permit(:name, :active, :category_id)
     end
 end

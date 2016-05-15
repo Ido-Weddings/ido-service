@@ -12,7 +12,7 @@ class SubCategoriesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create sub_category" do
     assert_difference('SubCategory.count') do
-      post sub_categories_url, params: { sub_category: { active: @sub_category.active, category_id: @sub_category.category_id, type: @sub_category.type } }
+      post sub_categories_url, params: { sub_category: { active: @sub_category.active, category_id: @sub_category.category_id, name: @sub_category.name } }
     end
 
     assert_response 201
@@ -24,7 +24,7 @@ class SubCategoriesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update sub_category" do
-    patch sub_category_url(@sub_category), params: { sub_category: { active: @sub_category.active, category_id: @sub_category.category_id, type: @sub_category.type } }
+    patch sub_category_url(@sub_category), params: { sub_category: { active: @sub_category.active, category_id: @sub_category.category_id, name: @sub_category.name } }
     assert_response 200
   end
 
