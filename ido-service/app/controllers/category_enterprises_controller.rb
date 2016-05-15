@@ -3,8 +3,8 @@ class CategoryEnterprisesController < ApplicationController
 
   # GET /category_enterprises
   def index
-@category_enterprises = Category_enterprise.where(params[:where]).offset(params[:offset]).limit(params[:limit]).order(params[:order])
 
+    @category_enterprises = CategoryEnterprise.where(params[:where]).offset(params[:offset]).limit(params[:limit]).order(params[:order])
     render json: @category_enterprises
   end
 

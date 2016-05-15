@@ -84,7 +84,7 @@ Picture.create category_enterprise_id: category_enterprise.id, url: "https://cdn
 Picture.create category_enterprise_id: category_enterprise.id, url: "https://cdn0.casamentos.com.br/emp/fotos/4/0/4/8/-04e5496_13_154048.jpg"
 Picture.create category_enterprise_id: category_enterprise.id, url: "https://cdn0.casamentos.com.br/emp/fotos/4/0/4/8/-cla0190_13_154048.jpg"
 
-Enterprises Musician
+#Enterprises Musician
 enterprise = Enterprise.create(name: "RG Music",
                          description: "A música é a alma de uma celebração, e o repertório de um enlace deve ser executado por músicos que, além de comprometimento, contam com talento e sensibilidade. O grupo RG Music conta com profissionais que somam mais de 20 anos de experiência do mercado musical e, junto aos casais, organiza a seleção para cada enlace, de forma única, com instrumentos clássicos e uma interpretação únicas das canções.",
    											telephone: "3344-1133",
@@ -184,7 +184,6 @@ enterprise = Enterprise.create(name: "JK Foto e Filmagem",
  # Enterprises dress
 enterprise = Enterprise.create(name: "D Blanc Sposa",
                          description: "A D Blanc Sposa é o lugar certo para a noiva que deseja destacar com todo esplendor a sua condição de protagonismo nesta data tão importante. Na loja você irá encontrar uma série de opções, modelos e designs exclusivos para compor a sua produção de casamento.",
-   											capacity: "1000",
    											telephone: "3344-1133",
    											cellphone: "8112-1212",
                          email: "blancsposanoivas@blancsposanoivas.com",
@@ -214,7 +213,6 @@ Picture.create category_enterprise_id: category_enterprise.id, url: "https://cdn
 
 enterprise = Enterprise.create(name: "Seratta Modafesta",
                          description: "A Serrata Modafesta é uma empresa especialista em roupas para festas. Um momento especial merece uma roupa mais que especial, têm que ser elegante e sofisticada. Assim são as coleções dessa equipe. Todas as roupas feitas por eles, tem um acabamento de primeira e com tecidos de qualidade. Você vai estar deslumbrante.",
-   											capacity: "1000",
    											telephone: "3344-1133",
    											cellphone: "8112-1212",
                          email: "serattamodafesta@serattamodafesta.com",
@@ -230,7 +228,6 @@ Picture.create category_enterprise_id: category_enterprise.id, url: "https://cdn
  # Enterprises Decoration
 enterprise = Enterprise.create(name: "LD2eventos",
                          description: "A LD2eventos organiza sua decoração para que a sua cerimônia e/ou recepção seja o mais perfeita, o seu grande dia tem que está lindo para que seus convidados e vocês noivos guardem lindas lembranças do seu grande dia. Realizam festas de casamentos, debutantes, bodas, entre outras.",
-   											capacity: "1000",
    											telephone: "3344-1133",
    											cellphone: "8112-1212",
                          email: "ld2events@ld2eventos.com",
