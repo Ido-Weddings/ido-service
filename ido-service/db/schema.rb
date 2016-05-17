@@ -13,14 +13,17 @@
 
 ActiveRecord::Schema.define(version: 20160515172061) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "advises", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "enterprise_id"
     t.string   "content"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
-    t.index ["enterprise_id"], name: "index_advises_on_enterprise_id"
-    t.index ["user_id"], name: "index_advises_on_user_id"
+    t.index ["enterprise_id"], name: "index_advises_on_enterprise_id", using: :btree
+    t.index ["user_id"], name: "index_advises_on_user_id", using: :btree
   end
 
   create_table "categories", force: :cascade do |t|
@@ -37,8 +40,8 @@ ActiveRecord::Schema.define(version: 20160515172061) do
     t.integer  "capacity"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
-    t.index ["category_id"], name: "index_category_enterprises_on_category_id"
-    t.index ["enterprise_id"], name: "index_category_enterprises_on_enterprise_id"
+    t.index ["category_id"], name: "index_category_enterprises_on_category_id", using: :btree
+    t.index ["enterprise_id"], name: "index_category_enterprises_on_enterprise_id", using: :btree
   end
 
   create_table "category_preferences", force: :cascade do |t|
@@ -47,8 +50,8 @@ ActiveRecord::Schema.define(version: 20160515172061) do
     t.integer  "category_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
-    t.index ["category_id"], name: "index_category_preferences_on_category_id"
-    t.index ["preference_id"], name: "index_category_preferences_on_preference_id"
+    t.index ["category_id"], name: "index_category_preferences_on_category_id", using: :btree
+    t.index ["preference_id"], name: "index_category_preferences_on_preference_id", using: :btree
   end
 
   create_table "enterprises", force: :cascade do |t|
@@ -71,8 +74,8 @@ ActiveRecord::Schema.define(version: 20160515172061) do
     t.integer  "enterprise_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
-    t.index ["enterprise_id"], name: "index_favorites_on_enterprise_id"
-    t.index ["user_id"], name: "index_favorites_on_user_id"
+    t.index ["enterprise_id"], name: "index_favorites_on_enterprise_id", using: :btree
+    t.index ["user_id"], name: "index_favorites_on_user_id", using: :btree
   end
 
   create_table "friends", force: :cascade do |t|
@@ -80,7 +83,7 @@ ActiveRecord::Schema.define(version: 20160515172061) do
     t.integer  "friend_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_friends_on_user_id"
+    t.index ["user_id"], name: "index_friends_on_user_id", using: :btree
   end
 
   create_table "messages", force: :cascade do |t|
@@ -90,8 +93,8 @@ ActiveRecord::Schema.define(version: 20160515172061) do
     t.boolean  "posted_by_user"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
-    t.index ["enterprise_id"], name: "index_messages_on_enterprise_id"
-    t.index ["user_id"], name: "index_messages_on_user_id"
+    t.index ["enterprise_id"], name: "index_messages_on_enterprise_id", using: :btree
+    t.index ["user_id"], name: "index_messages_on_user_id", using: :btree
   end
 
   create_table "pictures", force: :cascade do |t|
@@ -101,9 +104,9 @@ ActiveRecord::Schema.define(version: 20160515172061) do
     t.integer  "message_id"
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
-    t.index ["category_enterprise_id"], name: "index_pictures_on_category_enterprise_id"
-    t.index ["message_id"], name: "index_pictures_on_message_id"
-    t.index ["user_id"], name: "index_pictures_on_user_id"
+    t.index ["category_enterprise_id"], name: "index_pictures_on_category_enterprise_id", using: :btree
+    t.index ["message_id"], name: "index_pictures_on_message_id", using: :btree
+    t.index ["user_id"], name: "index_pictures_on_user_id", using: :btree
   end
 
   create_table "preferences", force: :cascade do |t|
@@ -111,7 +114,7 @@ ActiveRecord::Schema.define(version: 20160515172061) do
     t.integer  "user_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
-    t.index ["user_id"], name: "index_preferences_on_user_id"
+    t.index ["user_id"], name: "index_preferences_on_user_id", using: :btree
   end
 
   create_table "ratings", force: :cascade do |t|
@@ -120,8 +123,8 @@ ActiveRecord::Schema.define(version: 20160515172061) do
     t.integer  "enterprise_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
-    t.index ["enterprise_id"], name: "index_ratings_on_enterprise_id"
-    t.index ["user_id"], name: "index_ratings_on_user_id"
+    t.index ["enterprise_id"], name: "index_ratings_on_enterprise_id", using: :btree
+    t.index ["user_id"], name: "index_ratings_on_user_id", using: :btree
   end
 
   create_table "sub_categories", force: :cascade do |t|
@@ -130,7 +133,7 @@ ActiveRecord::Schema.define(version: 20160515172061) do
     t.integer  "category_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.index ["category_id"], name: "index_sub_categories_on_category_id"
+    t.index ["category_id"], name: "index_sub_categories_on_category_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
